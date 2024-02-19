@@ -11,7 +11,7 @@ function FilterableData({ data }) {
         onFilterTextChange={setFilterText}
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <ProductTable
           data={data}
           filterText={filterText}
@@ -73,7 +73,7 @@ function Card({ data }) {
 
   return (
     <>
-      <section className="w-full bg-black rounded-lg text-white text-wrap p-3">
+      <section className="w-full bg-black rounded-lg text-white break-words p-3">
         <h3 className="mb-3 text-2xl">{data.title}</h3>
         {valid_email && <a href={`mailto:${data.email}`} className="text-blue-500 hover:underline">{data.email}</a>}
         {valid_infojobs && <a href={data.infojobs} className="text-blue-500 hover:underline">InfoJobs</a>}
@@ -99,7 +99,6 @@ function SearchBar({
 }
 
 export default function App() {
-
   return (
     <>
       <header className="w-full h-20 bg-black text-white flex justify-center items-center mb-5">
