@@ -3,10 +3,13 @@
 ## Informações do projeto
 
 Versão do Node: `18 LTS (Hydrogen)`
+
 Usado:
-    - Vite
-    - React JS
-    - Tailwind CSS
+- Vite
+- React JS
+- Tailwind CSS
+
+## Desenvolvimento
 
 Build
 
