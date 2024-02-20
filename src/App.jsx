@@ -96,9 +96,9 @@ export default function App() {
     <>
       <header className="w-full h-20 bg-black text-white flex justify-center items-center mb-5">
         <h2 className="text-3xl">
-          Info Business
-        </h2>
-      </header>
+          <a href="/">Work With Us</a>
+        </h2 >
+      </header >
 
       <main className="flex justify-center m-5">
         <div className="w-full md:w-[768px] lg:w-[1024px]">
