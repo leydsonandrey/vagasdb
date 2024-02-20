@@ -53,33 +53,26 @@ function ProductRow({ data }) {
 }
 
 function Card({ data }) {
-  let valid_email, valid_infojobs, valid_gupy, valid_portal_de_vagas
-
-  if (data.email != null) {
-    valid_email = true
-  }
-
-  if (data.infojobs != null) {
-    valid_infojobs = true
-  }
-
-  if (data.gupy != null) {
-    valid_gupy = true
-  }
-
-  if (data.portal_de_vagas != null) {
-    valid_portal_de_vagas = true
+  function ListLinks({ name, data }) {
+    return data ? <li><a href={data} target="_blank" className="hover:underline text-blue-500">{name}</a></li> : ""
   }
 
   return (
     <>
       <section className="w-full bg-black rounded-lg text-white break-words p-3">
-        <h3 className="mb-3 text-2xl">{data.title}</h3>
-        {valid_email && <a href={`mailto:${data.email}`} className="text-blue-500 hover:underline">{data.email}</a>}
-        {valid_infojobs && <a href={data.infojobs} className="text-blue-500 hover:underline">InfoJobs</a>}
-        {valid_gupy && <a href={data.gupy} className="text-blue-500 hover:underline">Gupy</a>}
-        {valid_portal_de_vagas && <a href={data.portal_de_vagas} className="text-blue-500 hover:underline">Portal de Vagas</a>}
-      </section >
+        <div className="mb-3">
+          <a className="hover:underline" href={data.site} target="_blank"><h3 className="text-2xl">{data.title}</h3></a>
+          {data.email ? <a className="hover:underline text-gray-400" href={`mailto:${data.email}`}>{data.email}</a> : ""}
+        </div>
+        <ul>
+          <ListLinks name="Trabalhe Conosco" data={data.trabalhe_conosco} />
+          <ListLinks name="Portal de Vagas" data={data.portal_de_vagas} />
+          <ListLinks name="LinkedIn" data={data.linkedin} />
+          <ListLinks name="Gupy" data={data.gupy} />
+          <ListLinks name="PandaPé" data={data.pandape} />
+          <ListLinks name="InfoJobs" data={data.infojobs} />
+        </ul>
+      </section>
     </>
   )
 }
