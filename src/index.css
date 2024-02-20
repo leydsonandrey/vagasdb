@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .link-hover {
+    @apply hover:underline hover:after:content-['_🔗'];
+  }
+
+  .responsive-width {
+    @apply w-full md:w-[768px] lg:w-[1024px];
+  }
+
+  .border-style {
+    @apply border border-slate-700;
+  }
+
+  .border-style-top {
+    @apply border-t border-slate-700;
+  }
+
+  .border-style-bottom {
+    @apply border-b border-slate-700;
+  }
+}
