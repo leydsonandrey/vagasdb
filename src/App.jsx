@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { DB_BUSINESS } from "./db_business"
+import { DB_SITES } from "./db_sites"
 
 function FilterableData({ data }) {
   const [filterText, setFilterText] = useState('');
@@ -91,7 +92,24 @@ function SearchBar({
   );
 }
 
+function Button({ value, onClick, id, active }) {
+  let buttonProp = "p-2 border-style rounded-md mb-5"
+  return (
+    <input
+      type="button"
+      id={id}
+      value={value}
+      onClick={onClick}
+      className={active ?
+        `${buttonProp} text-neutral-950 bg-neutral-50 hover:bg-neutral-200` :
+        `${buttonProp} text-neutral-400 hover:text-neutral-50 hover:bg-neutral-900 shadow-style`}
+    />
+  )
+}
+
 export default function App() {
+  const [navSeletion, setNavSeletion] = useState(true)
+
   return (
     <>
       <header className="w-full h-20 bg-black text-white flex justify-center items-center mb-5">
@@ -100,12 +118,15 @@ export default function App() {
         </h2 >
       </header >
 
-      <main className="flex justify-center m-5">
-        <div className="w-full md:w-[768px] lg:w-[1024px]">
-          <FilterableData data={DATA_BASE} />
+      <main className="flex justify-center p-5">
+        <div className="responsive-width">
+          <nav className="flex flex-row gap-5">
+            <Button value="Empresas" active={navSeletion} onClick={() => { setNavSeletion(true) }} />
+            <Button value="Sites de vagas" active={!navSeletion} onClick={() => { setNavSeletion(false) }} />
+          </nav>
+          {navSeletion ? <FilterableData data={DB_BUSINESS} /> : <FilterableData data={DB_SITES} />}
         </div>
-      </main >
-    </>
+      </main>
   )
 }
 
