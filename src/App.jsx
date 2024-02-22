@@ -12,8 +12,8 @@ function FilterableData({ data }) {
         onFilterTextChange={setFilterText}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <ProductTable
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <CardList
           data={data}
           filterText={filterText}
         />
@@ -22,7 +22,7 @@ function FilterableData({ data }) {
   );
 }
 
-function ProductTable({ data, filterText }) {
+function CardList({ data, filterText }) {
   const cards = [];
 
   data.forEach((dataValue) => {
@@ -34,7 +34,7 @@ function ProductTable({ data, filterText }) {
       return;
     }
     cards.push(
-      <ProductRow
+      <Card
         data={dataValue}
         key={dataValue.title} />
     );
@@ -47,25 +47,30 @@ function ProductTable({ data, filterText }) {
   );
 }
 
-function ProductRow({ data }) {
-  return (
-    <Card data={data} />
-  );
-}
-
 function Card({ data }) {
   function ListLinks({ name, data }) {
-    return data ? <li><a href={data} target="_blank" className="hover:underline text-blue-500">{name}</a></li> : ""
+    return data ?
+      <li className="py-2">
+        <a
+          href={data}
+          target="_blank"
+          className="link-hover text-blue-400 hover:text-blue-500"
+        >
+          {name}
+        </a>
+      </li> : ""
   }
 
   return (
     <>
-      <section className="w-full bg-black rounded-lg text-white break-words p-3">
-        <div className="mb-3">
-          <a className="hover:underline" href={data.site} target="_blank"><h3 className="text-2xl">{data.title}</h3></a>
-          {data.email ? <a className="hover:underline text-gray-400" href={`mailto:${data.email}`}>{data.email}</a> : ""}
+      <section className="border-style w-auto border rounded-xl text-neutral-50 shadow-style break-words p-3">
+        <div className="mb-2">
+          <h3 className="text-2xl">
+            <a className="link-hover text-neutral-50" href={data.site} target="_blank">{data.title}</a>
+          </h3>
+          {data.email ? <h4><a className="hover:underline text-neutral-400" href={`mailto:${data.email}`}>{data.email}</a></h4> : ""}
         </div>
-        <ul>
+        <ul className="divide-y divide-neutral-800">
           <ListLinks name="Trabalhe Conosco" data={data.trabalhe_conosco} />
           <ListLinks name="Portal de Vagas" data={data.portal_de_vagas} />
           <ListLinks name="LinkedIn" data={data.linkedin} />
@@ -73,7 +78,7 @@ function Card({ data }) {
           <ListLinks name="PandaPé" data={data.pandape} />
           <ListLinks name="InfoJobs" data={data.infojobs} />
         </ul>
-      </section>
+      </section >
     </>
   )
 }
@@ -87,7 +92,7 @@ function SearchBar({
       type="text"
       value={filterText} placeholder="Pesquisar..."
       onChange={(e) => onFilterTextChange(e.target.value)}
-      className="w-full h-10 mb-5 border-2 rounded-md border-black p-3"
+      className="w-full h-10 mb-5 p-3 border-style rounded-md focus:border-1 focus:border-neutral-400 bg-neutral-950 focus:ring-4 focus:ring-neutral-700 focus:outline-0 text-neutral-50 placeholder-neutral-400 shadow-style"
     />
   );
 }
@@ -111,12 +116,12 @@ export default function App() {
   const [navSeletion, setNavSeletion] = useState(true)
 
   return (
-    <>
-      <header className="w-full h-20 bg-black text-white flex justify-center items-center mb-5">
+    <div>
+      <header className="border-style-bottom w-full h-20 flex justify-center items-center text-neutral-50">
         <h2 className="text-3xl">
-          <a href="/">Work With Us</a>
-        </h2 >
-      </header >
+          <a href="/" className="hover:underline text-neutral-50">Work With Us</a>
+        </h2>
+      </header>
 
       <main className="flex justify-center p-5">
         <div className="responsive-width">
@@ -127,6 +132,14 @@ export default function App() {
           {navSeletion ? <FilterableData data={DB_BUSINESS} /> : <FilterableData data={DB_SITES} />}
         </div>
       </main>
+
+      <footer className="w-full flex justify-center items-center border-style-top p-5">
+        <div className="responsible-width">
+          <p className="text-neutral-50 text-center mb-2">Feito com &#10084; por <a href="https://andrey-tar-xz.github.io/links" className="hover:underline text-blue-500">Leydson Andrey</a></p>
+          <p className="text-neutral-50 text-center"><a href="https://github.com/andrey-tar-xz/workwithus" className="hover:underline text-blue-500">Repositório no Github</a></p>
+        </div>
+      </footer>
+    </div>
   )
 }
 
