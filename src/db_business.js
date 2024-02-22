@@ -1,4 +1,5 @@
 const DB_BUSINESS = [
+  { title: "Rede Mais", site: "https://www.redemaisrn.com.br/", trabalhe_conosco: "https://www.redemaisrn.com.br/trabalhe-conosco", email: "selecao@redemaisrn.com.br" },
   { title: "Atacadão", site: "https://www.atacadao.com.br/", trabalhe_conosco: "https://www.atacadao.com.br/institucional/trabalhe-conosco", pandape: "https://atacadao.pandape.infojobs.com.br/" },
   { title: "Carrefour", site: "https://www.carrefour.com.br/", trabalhe_conosco: "https://www.carrefour.com.br/trabalhe-conosco", linkedin: "https://www.linkedin.com/company/carrefour-brasil/", portal_de_vagas: "https://vemsergrupocrf.com.br/", pandape: "https://grupocarrefourbrasil.pandape.infojobs.com.br/", infojobs: "https://www.infojobs.com.br/grupocarrefourbrasil" },
   { title: "Hapvida", site: "https://www.hapvida.com.br/", gupy: "https://hapvidandi.gupy.io/" },
