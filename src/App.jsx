@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { DATA_BASE } from "./database"
+import { DB_BUSINESS } from "./db_business"
 
 function FilterableData({ data }) {
   const [filterText, setFilterText] = useState('');
