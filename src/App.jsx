@@ -33,7 +33,7 @@ function CardList({ data, filterText }) {
         filterText.toLowerCase()
       ) === -1
     ) {
-      return;
+      return
     }
     cards.push(
       <Card
@@ -89,12 +89,12 @@ export default function App() {
   return (
     <div>
       <header className="border-style-bottom w-full h-20 flex justify-center items-center text-neutral-50">
-        <h2 className="text-3xl">
+        <h1 className="text-3xl">
           <a href="/" className="hover:underline text-neutral-50">Work With Us</a>
-        </h2>
+        </h1>
       </header>
 
-      <main className="flex justify-center p-5">
+      <main className="flex justify-center p-5 bg-neutral-950">
         <div className="responsive-width">
           <nav className="flex flex-row gap-5">
             <Button value="Empresas" active={navSeletion} onClick={() => { setNavSeletion(true) }} />
