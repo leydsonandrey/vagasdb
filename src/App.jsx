@@ -68,6 +68,7 @@ function Card({ data }) {
           <h3 className="text-2xl">
             <a className="link-hover text-neutral-50" href={data.site} target="_blank">{data.title}</a>
           </h3>
+         {data.desc ? <h4 className=" text-neutral-400">{data.desc}</h4> : ""}
           {data.email ? <h4><a className="hover:underline text-neutral-400" href={`mailto:${data.email}`}>{data.email}</a></h4> : ""}
         </div>
         <ul className="divide-y divide-neutral-800">
