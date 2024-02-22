@@ -3,6 +3,7 @@ import { DB_BUSINESS } from "./db/db_business"
 import { DB_SITES } from "./db/db_sites"
 import SearchBar from "./components/SearchBar"
 import Button from "./components/Button"
+import Logo from './assets/wwu.svg';
 
 function FilterableData({ data }) {
   const [filterText, setFilterText] = useState("")
@@ -87,18 +88,25 @@ export default function App() {
   const [navSeletion, setNavSeletion] = useState(true)
 
   return (
-    <div>
+    <>
       <header className="border-style-bottom w-full h-20 flex justify-center items-center text-neutral-50">
-        <h1 className="text-3xl">
-          <a href="/" className="hover:underline text-neutral-50">Work With Us</a>
-        </h1>
+        <a href="/">
+          <img src={Logo} alt='Work With Us logo' className="w-20" />
+        </a>
       </header>
 
       <main className="flex justify-center p-5 bg-neutral-950">
         <div className="responsive-width">
           <nav className="flex flex-row gap-5">
-            <Button value="Empresas" active={navSeletion} onClick={() => { setNavSeletion(true) }} />
-            <Button value="Sites de vagas" active={!navSeletion} onClick={() => { setNavSeletion(false) }} />
+            <Button
+              value="Empresas"
+              active={navSeletion}
+              onClick={() => { setNavSeletion(true) }} />
+
+            <Button
+              value="Sites de vagas"
+              active={!navSeletion}
+              onClick={() => { setNavSeletion(false) }} />
           </nav>
           {navSeletion ? <FilterableData data={DB_BUSINESS} /> : <FilterableData data={DB_SITES} />}
         </div>
@@ -110,7 +118,7 @@ export default function App() {
           <p className="text-neutral-50 text-center"><a href="https://github.com/andrey-tar-xz/workwithus" className="hover:underline text-blue-500">Repositório no Github</a></p>
         </div>
       </footer>
-    </div>
+    </>
   )
 }
 
