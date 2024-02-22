@@ -4,7 +4,7 @@
 
 @layer components {
   html {
-    @apply bg-neutral-950;
+    @apply bg-neutral-900;
   }
 
   .link-hover {
@@ -28,6 +28,6 @@
   }
 
   .shadow-style {
-    @apply shadow hover:shadow-neutral-50/20 hover:shadow-lg
+    @apply shadow hover:shadow-neutral-50/20 hover:shadow-lg transition duration-300
   }
 }
