@@ -8,6 +8,7 @@ Usado:
 - Vite
 - React JS
 - Tailwind CSS
+- React Router
 
 ## Desenvolvimento
 
