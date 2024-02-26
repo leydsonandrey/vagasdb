@@ -28,6 +28,6 @@
   }
 
   .shadow-style {
-    @apply shadow hover:shadow-neutral-50/20 hover:shadow-lg transition duration-300
+    @apply shadow hover:shadow-neutral-50/30 hover:shadow-lg transition duration-300
   }
 }
