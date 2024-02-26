@@ -57,15 +57,16 @@ export default function Root() {
   return (
     <>
       <Header />
-      <main className="flex justify-center p-5 bg-neutral-950">
-        <div className="responsive-width">
-          <nav className="flex flex-row gap-5 mb-5">
-            <NavButton link="/" name="Empresas" />
-            <NavButton link="/sites-de-vagas" name="Sites de Vagas" />
-          </nav>
-          <Outlet />
-        </div>
-      </main>
+      <Main>
+        <nav className="flex flex-row flex-wrap gap-5">
+          <NavButton link="/" name="Empresas" />
+          <NavButton link="/sites-de-vagas" name="Sites de Vagas" />
+          <NavButton link="/cursos-de-graça" name="Cursos de Graça" />
+          <NavButton link="/sites-de-concursos" name="Sites de Concursos" />
+        </nav>
+        <hr className="my-5 border-neutral-800" />
+        <Outlet />
+      </Main>
       <Footer />
     </>
   )
