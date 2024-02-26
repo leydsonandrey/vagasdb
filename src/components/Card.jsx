@@ -1,14 +1,10 @@
+import Link from "./Link"
+
 export default function Card({ data }) {
   function ListLinks({ name, data }) {
     return data ?
       <li className="py-2">
-        <a
-          href={data}
-          target="_blank"
-          className="link-hover text-blue-400 hover:text-blue-500"
-        >
-          {name}
-        </a>
+        <Link href={data} name={name} />
       </li> : ""
   }
 
