@@ -7,6 +7,5 @@ export default function Header() {
         <img src={Logo} alt='Work With Us logo' className="w-20" />
       </a>
     </header>
-
   )
 }

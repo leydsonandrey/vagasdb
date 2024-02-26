@@ -2,10 +2,11 @@ import { useState } from "react"
 import { Outlet } from "react-router-dom";
 
 import Header from "../components/Header"
+import Main from "../components/Main"
 import NavButton from "../components/NavButton"
-import Footer from "../components/Footer"
 import SearchBar from "../components/SearchBar"
 import Card from "../components/Card"
+import Footer from "../components/Footer"
 
 export function FilterableData({ data }) {
   const [filterText, setFilterText] = useState("")
