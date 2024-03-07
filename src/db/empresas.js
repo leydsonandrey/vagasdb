@@ -1,4 +1,7 @@
 export const DB_EMPRESAS = [
+  {
+    title: "Americanas", site: "https://www.americanas.com.br/", trabalhe_conosco: "https://carreiras.americanas.com/", pandape: "https://americanas.pandape.infojobs.com.br/",
+  },
   { 
     title: "Rede Mais", site: "https://www.redemaisrn.com.br/", trabalhe_conosco: "https://www.redemaisrn.com.br/trabalhe-conosco", email: "selecao@redemaisrn.com.br"
   },
