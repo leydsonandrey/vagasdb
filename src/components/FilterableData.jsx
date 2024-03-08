@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import NavButton from "./NavButton"
+import Button from "./Button"
 import SearchBar from "./SearchBar"
 import Card from "./Card"
 
@@ -24,10 +24,26 @@ export default function FilterableData() {
   return (
     <>
       <nav className="flex flex-row flex-wrap gap-5">
-        <NavButton name="Empresas" link="/categorias/empresas" />
-        <NavButton name="Sites de Vagas" link="/categorias/sites-de-vagas" />
-        <NavButton name="Cursos de Graça" link="/categorias/cursos-de-graça" />
-        <NavButton name="Sites de Concursos" link="/categorias/sites-de-concursos" />
+        <Button
+          name="Empresas"
+          onClick={() => setWindow(1)}
+          isActive={window === 1 ? true : false}
+        />
+        <Button
+          name="Sites de Vagas"
+          onClick={() => setWindow(2)}
+          isActive={window === 2 ? true : false}
+        />
+        <Button
+          name="Cursos de Graça"
+          onClick={() => setWindow(3)}
+          isActive={window === 3 ? true : false}
+        />
+        <Button
+          name="Sites de Concursos"
+          onClick={() => setWindow(4)}
+          isActive={window === 4 ? true : false}
+        />
       </nav>
 
       <hr className="my-5 border-neutral-800" />
