@@ -4,9 +4,23 @@ import NavButton from "./NavButton"
 import SearchBar from "./SearchBar"
 import Card from "./Card"
 
-export default function FilterableData({ data }) {
-  const [filterText, setFilterText] = useState("")
+import { DB_EMPRESAS } from "../db/empresas"
+import { DB_SITES } from "../db/sites"
+import { DB_CURSOS } from "../db/cursos"
+import { DB_CONCURSOS } from "../db/concursos"
 
+export default function FilterableData() {
+  const [filterText, setFilterText] = useState("")
+  const [window, setWindow] = useState(1)
+
+  let data = DB_EMPRESAS
+
+  // TODO: concertar essa gambiarra
+  if (window === 1) { data = DB_EMPRESAS }
+  if (window === 2) { data = DB_SITES }
+  if (window === 3) { data = DB_CURSOS }
+  if (window === 4) { data = DB_CONCURSOS }
+  
   return (
     <>
       <nav className="flex flex-row flex-wrap gap-5">
