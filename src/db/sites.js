@@ -1,6 +1,9 @@
 export const DB_SITES = [
   {
-    title: "Vagas", site: "https://www.vagas.com.br/"
+    title: "99jobs", site: "https://www.99jobs.com/"
+  },
+  {
+    title: "Vagas.com.br", site: "https://www.vagas.com.br/"
   },
   {
     title: "LinkedIn", site: "https://br.linkedin.com/jobs"

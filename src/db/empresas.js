@@ -1,5 +1,23 @@
 export const DB_EMPRESAS = [
   {
+    title: "Pague Menos", site: "https://www.paguemenos.com.br/", gupy: "https://paguemenosextrafarma.gupy.io/",
+  },
+  {
+    title: "Petz", site: "https://www.petz.com.br/", gupy: "https://petz.gupy.io/",
+  },
+  {
+    title: "Magazine Luiza", site: "https://www.magazineluiza.com.br/", trabalhe_conosco: "https://carreiras.magazineluiza.com.br/",
+  },
+  {
+    title: "Favorito", site: "https://www.favoritosupermercados.com.br/", trabalhe_conosco: "https://www.favoritosupermercados.com.br/institucional/paginas/trabalhe-conosco",
+  },
+  {
+    title: "Vicunha", site: "https://www.vicunha.com/", vagas: "https://trabalheconosco.vagas.com.br/vicunha",
+  },
+  {
+    title: "3 Corações", site: "https://www.3coracoes.com.br/", gupy: "https://3coracoes.gupy.io/",
+  },
+  {
     title: "Americanas", site: "https://www.americanas.com.br/", trabalhe_conosco: "https://carreiras.americanas.com/", pandape: "https://americanas.pandape.infojobs.com.br/",
   },
   { 

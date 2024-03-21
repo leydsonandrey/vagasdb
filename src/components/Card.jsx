@@ -20,6 +20,7 @@ export default function Card({ data }) {
         <ListLinks name="Trabalhe Conosco" data={data.trabalhe_conosco} />
         <ListLinks name="Portal de Vagas" data={data.portal_de_vagas} />
         <ListLinks name="LinkedIn" data={data.linkedin} />
+        <ListLinks name="Vagas.com.br" data={data.vagas} />
         <ListLinks name="Gupy" data={data.gupy} />
         <ListLinks name="PandaPé" data={data.pandape} />
         <ListLinks name="InfoJobs" data={data.infojobs} />
