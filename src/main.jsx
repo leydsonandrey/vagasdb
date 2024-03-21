@@ -17,9 +17,9 @@ import ErrorPage from "./error-page"
 const Router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index element={<Navigate to="/categorias" />}/>
+      <Route index element={<Navigate to="/categorias" replace={true} />}/>
       <Route path="/categorias" element={<Home />} />
-      <Route path="sobre" element={<Sobre />} />
+      <Route path="/sobre" element={<Sobre />} />
       <Route path="/error-page" element={<ErrorPage />} />
     </Route>
   )
