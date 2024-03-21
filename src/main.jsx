@@ -20,7 +20,7 @@ const Router = createBrowserRouter(
       <Route index element={<Navigate to="/categorias" replace={true} />}/>
       <Route path="/categorias" element={<Home />} />
       <Route path="/sobre" element={<Sobre />} />
-      <Route path="/error-page" element={<ErrorPage />} />
+      <Route path="/*" element={<ErrorPage />} />
     </Route>
   )
 )
