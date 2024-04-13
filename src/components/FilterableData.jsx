@@ -74,6 +74,7 @@ function CardList({ data, filterText }) {
     ) {
       return
     }
+
     cards.push(
       <Card
         data={dataValue}

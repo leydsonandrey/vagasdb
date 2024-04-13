@@ -3,7 +3,7 @@ export default function Link({href, name}) {
     <a
       href={href}
       target="_blank"
-      className="hover:underline text-blue-600 hover:text-blue-400"
+      className="hover:underline text-blue-500 hover:text-blue-400"
     >
       {name}
     </a>
