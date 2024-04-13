@@ -1,4 +1,7 @@
 export const DB_EMPRESAS = [
+	{
+		title: "McDonald's", site: "https://www.mcdonalds.com.br/", trabalhe_conosco: "https://www.mcdonalds.com.br/quemsomos/trabalhe-conosco", gupy_corporativo: "https://corporativomc.gupy.io/" , gupy: "https://restaurantemc.gupy.io/",
+	},
   {
     title: "Pague Menos", site: "https://www.paguemenos.com.br/", gupy: "https://paguemenosextrafarma.gupy.io/",
   },
