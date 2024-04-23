@@ -12,7 +12,7 @@ import "./index.css"
 import App from "./App"
 import Home from "./pages/home"
 import Sobre from "./pages/sobre"
-import ErrorPage from "./error-page"
+import ErrorPage from "./pages/error-page"
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
