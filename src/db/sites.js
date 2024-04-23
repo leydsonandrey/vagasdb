@@ -1,5 +1,14 @@
 export const DB_SITES = [
   {
+    title: "Sólides", site: "https://vagas.solides.com.br/"
+  },
+  {
+    title: "Empregare", site: "https://www.empregare.com/pt-br"
+  },
+  {
+    title: "BrVagas", site: "https://brvagas.com.br/"
+  },
+  {
     title: "99jobs", site: "https://www.99jobs.com/"
   },
   {

@@ -1,7 +1,13 @@
 export const DB_EMPRESAS = [
-	{
-		title: "McDonald's", site: "https://www.mcdonalds.com.br/", trabalhe_conosco: "https://www.mcdonalds.com.br/quemsomos/trabalhe-conosco", gupy_corporativo: "https://corporativomc.gupy.io/" , gupy: "https://restaurantemc.gupy.io/",
-	},
+  {
+    title: "ALE Combustíveis", site: "https://www.ale.com.br/", gupy: "https://oportunidadesale.gupy.io/", linkedin: "https://www.linkedin.com/company/alecombustiveis/"
+  },
+  {
+    title: "Iskisita Atakado", site: "https://www.iskisita.com.br/", email: "curriculo@iskisita.com.br"
+  },
+  {
+    title: "McDonald's", site: "https://www.mcdonalds.com.br/", trabalhe_conosco: "https://www.mcdonalds.com.br/quemsomos/trabalhe-conosco", gupy_corporativo: "https://corporativomc.gupy.io/" , gupy: "https://restaurantemc.gupy.io/",
+  },
   {
     title: "Pague Menos", site: "https://www.paguemenos.com.br/", gupy: "https://paguemenosextrafarma.gupy.io/",
   },
