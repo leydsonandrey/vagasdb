@@ -1,5 +1,8 @@
 export const DB_EMPRESAS = [
   {
+    title: "Facell (TIM)", site: "https://facell.com/", linkedin: "https://www.linkedin.com/company/facell/jobs/", gupy: "https://facell.gupy.io/"
+  },
+  {
     title: "ALE Combustíveis", site: "https://www.ale.com.br/", gupy: "https://oportunidadesale.gupy.io/", linkedin: "https://www.linkedin.com/company/alecombustiveis/"
   },
   {
