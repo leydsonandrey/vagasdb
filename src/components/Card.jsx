@@ -1,21 +1,39 @@
-import Link from "./Link"
+import Link from "./Link";
 
 export default function Card({ data }) {
   function ListLinks({ name, data }) {
-    return data ?
+    return data ? (
       <li className="py-2">
         <Link href={data} name={name} />
-      </li> : ""
+      </li>
+    ) : (
+      ""
+    );
   }
 
   return (
     <section className="p-3 w-auto hover-theme shadow-style break-words">
       <ul className="mb-2 space-y-2">
         <li className="text-2xl">
-          <a className="link-hover text-neutral-200 font-semibold" href={data.site} target="_blank">{data.title}</a>
+          <a
+            className="link-hover text-neutral-200 font-semibold"
+            href={data.site}
+            target="_blank"
+          >
+            {data.title}
+          </a>
         </li>
         <li>
-          {data.email ? <a className="hover:underline text-neutral-400 py-1 sm:py" href={`mailto:${data.email}`}>{data.email}</a> : ""}
+          {data.email ? (
+            <a
+              className="hover:underline text-neutral-400 py-1 sm:py"
+              href={`mailto:${data.email}`}
+            >
+              {data.email}
+            </a>
+          ) : (
+            ""
+          )}
         </li>
       </ul>
       <ul className="divide-y divide-neutral-800">
@@ -29,5 +47,5 @@ export default function Card({ data }) {
         <ListLinks name="InfoJobs" data={data.infojobs} />
       </ul>
     </section>
-  )
+  );
 }

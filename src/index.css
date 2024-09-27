@@ -16,11 +16,11 @@
   }
 
   .background {
-    @apply bg-neutral-900
+    @apply bg-neutral-900;
   }
 
   .background-alt {
-    @apply bg-neutral-950
+    @apply bg-neutral-950;
   }
 
   .link-hover {
@@ -44,10 +44,10 @@
   }
 
   .shadow-style {
-    @apply shadow hover:shadow-neutral-50/30 hover:shadow-lg transition duration-300
+    @apply shadow hover:shadow-neutral-50/30 hover:shadow-lg transition duration-300;
   }
 
   .hover-theme {
-    @apply border-style bg-neutral-900 hover:bg-neutral-950 border rounded-xl text-neutral-200 shadow-style hover:ring-2 hover:ring-neutral-700 
+    @apply border-style bg-neutral-900 hover:bg-neutral-950 border rounded-xl text-neutral-200 shadow-style hover:ring-2 hover:ring-neutral-700;
   }
 }

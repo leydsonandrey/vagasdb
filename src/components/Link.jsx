@@ -1,4 +1,4 @@
-export default function Link({href, name}) {
+export default function Link({ href, name }) {
   return (
     <a
       href={href}
@@ -7,5 +7,5 @@ export default function Link({href, name}) {
     >
       {name}
     </a>
-  )
+  );
 }

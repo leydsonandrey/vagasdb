@@ -1,11 +1,11 @@
-import React from "react"
+import React from "react";
 
-import FilterableData from "../components/FilterableData"
+import FilterableData from "../components/FilterableData";
 
 export default function Root() {
   return (
     <>
       <FilterableData />
     </>
-  )
+  );
 }
