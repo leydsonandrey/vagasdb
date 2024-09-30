@@ -61,7 +61,7 @@ export default function FilterableData() {
         placeholder="Pesquisar..."
         onChange={(e) => setFilterText(e.target.value)}
       />
-      <CardList data={data} filterText={filterText} window={window} />
+      <CardList data={data} filterText={filterText} db={window} />
     </>
   );
 }
@@ -92,13 +92,13 @@ export default function FilterableData() {
 //   )
 // }
 
-const CardList = ({ data, filterText, window }) => {
+const CardList = ({ data, filterText, db }) => {
   const [page, setPage] = useState(0);
-  const itemsPerPage = 12;
+  const itemsPerPage = 15;
 
   useEffect(() => {
     setPage(0);
-  }, [window]);
+  }, [db]);
 
   useEffect(() => {
     setPage(0);
@@ -118,6 +118,15 @@ const CardList = ({ data, filterText, window }) => {
     startIndex + itemsPerPage,
   );
 
+  const scrollToTop = () => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const handlePrevious = () => {
     setPage((prevPage) => Math.max(prevPage - 1, 0));
     scrollToTop();
@@ -126,13 +135,6 @@ const CardList = ({ data, filterText, window }) => {
   const handleNext = () => {
     setPage((prevPage) => Math.min(prevPage + 1, totalPages - 1));
     scrollToTop();
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
   };
 
   return (
