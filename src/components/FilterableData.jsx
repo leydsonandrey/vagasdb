@@ -137,11 +137,21 @@ const CardList = ({ data, filterText, db }) => {
     scrollToTop();
   };
 
+  const ItensType = () => {
+    if (db === 1) {
+      return paginatedData.map((dataValue) => (
+        <Card key={dataValue.title} data={dataValue} list />
+      ));
+    }
+
+    return paginatedData.map((dataValue) => (
+      <Card key={dataValue.title} data={dataValue} />
+    ));
+  };
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-      {paginatedData.map((dataValue) => (
-        <Card key={dataValue.title} data={dataValue} />
-      ))}
+      <ItensType />
 
       {totalPages > 1 && (
         <div className="col-span-full place-self-center">
