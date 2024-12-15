@@ -1,5 +1,10 @@
 export const DB_EMPRESAS = [
   {
+    title: "Ferreira Costa",
+    site: "https://www.ferreiracosta.com/",
+    trabalhe_conosco: "https://carreiras.ferreiracosta.com/",
+  },
+  {
     title: "Facell (TIM)",
     site: "https://facell.com/",
     linkedin: "https://www.linkedin.com/company/facell/jobs/",
