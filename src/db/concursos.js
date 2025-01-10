@@ -1,5 +1,9 @@
 export const DB_CONCURSOS = [
   {
+    title: "FUNCERN",
+    site: "https://funcern.br/concursos/",
+  },
+  {
     title: "Edital Concursos Brasil",
     site: "https://editalconcursosbrasil.com.br/concursos-abertos/rn/",
   },
