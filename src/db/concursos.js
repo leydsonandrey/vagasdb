@@ -1,5 +1,13 @@
 export const DB_CONCURSOS = [
   {
+    title: "Edital Concursos Brasil",
+    site: "https://editalconcursosbrasil.com.br/concursos-abertos/rn/",
+  },
+  {
+    title: "PCI Concursos",
+    site: "https://www.pciconcursos.com.br/concursos/nordeste/#RN",
+  },
+  {
     title: "Cesgranrio",
     site: "https://www.cesgranrio.org.br/concursos/principal.aspx",
   },
