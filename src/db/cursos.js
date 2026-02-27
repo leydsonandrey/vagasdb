@@ -1,5 +1,9 @@
 export const DB_CURSOS = [
   {
+    title: "Rocketseat",
+    site: "https://www.rocketseat.com.br/",
+  },
+  {
     title: "Udemy",
     site: "https://www.udemy.com/pt/",
   },

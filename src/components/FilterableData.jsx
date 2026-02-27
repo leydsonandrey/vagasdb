@@ -8,6 +8,7 @@ import { DB_EMPRESAS } from "../db/empresas";
 import { DB_SITES } from "../db/sites";
 import { DB_CURSOS } from "../db/cursos";
 import { DB_CONCURSOS } from "../db/concursos";
+import { DB_AUTONOMO } from "../db/autonomo";
 
 export default function FilterableData() {
   const [filterText, setFilterText] = useState("");
@@ -27,6 +28,9 @@ export default function FilterableData() {
   }
   if (window === 4) {
     data = DB_CONCURSOS;
+  }
+  if (window === 5) {
+    data = DB_AUTONOMO;
   }
 
   return (
@@ -52,6 +56,11 @@ export default function FilterableData() {
           onClick={() => setWindow(4)}
           isActive={window === 4 ? true : false}
         />
+        <Button
+          name="Autônomo"
+          onClick={() => setWindow(5)}
+          isActive={window === 5 ? true : false}
+        />
       </nav>
 
       <hr className="my-5 border-neutral-800" />
@@ -65,32 +74,6 @@ export default function FilterableData() {
     </>
   );
 }
-
-// function CardList({ data, filterText }) {
-//   const cards = []
-
-//   data.forEach((dataValue) => {
-//     if (
-//       dataValue.title.toLowerCase().indexOf(
-//         filterText.toLowerCase()
-//       ) === -1
-//     ) {
-//       return
-//     }
-
-//     cards.push(
-//       <Card
-//         data={dataValue}
-//         key={dataValue.title} />
-//     )
-//   })
-
-//   return (
-//     <>
-//       {cards}
-//     </>
-//   )
-// }
 
 const CardList = ({ data, filterText, db }) => {
   const [page, setPage] = useState(0);
