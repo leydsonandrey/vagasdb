@@ -1,5 +1,10 @@
 export const DB_EMPRESAS = [
   {
+    title: "Sacolão",
+    site: "https://sacolao.com/",
+    trabalhe_conosco: "https://vagas.sacolao.com/", 
+  },
+  {
     title: "Ferreira Costa",
     site: "https://www.ferreiracosta.com/",
     trabalhe_conosco: "https://carreiras.ferreiracosta.com/",
